@@ -15,7 +15,8 @@ describe("Component", () => {
 
   describe('clicking on the button', () => {
     beforeAll(() => {
-      wrapper.find('button').simulate('click');
+      const buttonWrapper = wrapper.find('Buttons').dive();
+      buttonWrapper.find('button').at(1).simulate('click');
     })
 
     it('should be between 0 and 1', () => {
